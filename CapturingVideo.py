@@ -3,7 +3,7 @@ import cv2
 # Create a VideoCapture object
 cap = cv2.VideoCapture(0)
 
-# Check if camera opened successfully
+# Check if the camera opened successfully
 if not cap.isOpened(): 
     print("Unable to read camera feed")
 
@@ -16,9 +16,9 @@ while(True):
 
     if ret: 
         # Display the resulting frame    
-        cv2.imshow('frame',frame)
+        cv2.imshow('frame', frame)
 
-        # Press Q on keyboard to stop recording
+        # Press Q on the keyboard to stop recording
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
@@ -26,7 +26,7 @@ while(True):
     else:
         break  
 
-# When everything done, release the video capture and video write objects
+# When everything is done, release the video capture and video write objects
 cap.release()
 
 # Closes all the frames
